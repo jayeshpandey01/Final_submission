@@ -24,6 +24,11 @@ SawtchEarth is a comprehensive environmental intelligence platform that combines
 - 📱 **Cross-Platform** - Web and mobile applications
 - 💬 **AI Assistant** - Intelligent chatbot for environmental guidance
 
+## 🎥 Project Demo Video
+
+**Watch our complete project demonstration:**
+📹 [SawtchEarth Project Demo Video](https://drive.google.com/drive/u/0/folders/1WFYjwbOicwP2WPv2v4SuX6P33M28zyuO)
+
 ## 📸 Platform Screenshots
 
 ### Web Application
