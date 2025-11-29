@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>MARIDA - Marine Debris Archive</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+/* Header Section */
+.header-section {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 20px 0;
+  margin-bottom: 40px;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-section img {
+  max-height: 70px;
+  width: auto;
+}
+
+.title-section {
+  text-align: center;
+  flex: 1;
+  min-width: 300px;
+}
+
+.title-section h1 {
+  color: #27aae2;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.title-section p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.university-logos {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Main Content */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Navigation */
+.navigation {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  padding: 30px 0;
+  position: sticky;
+  top: 20px;
+}
+
+.nav-title {
+  text-align: center;
+  color: #27aae2;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  padding: 0 20px;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  margin-bottom: 5px;
+}
+
+.nav-links a {
+  display: block;
+  padding: 15px 25px;
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.nav-links a:hover {
+  background: linear-gradient(135deg, #27aae2, #1e90ff);
+  color: white;
+  border-left-color: #fff;
+  transform: translateX(5px);
+}
+
+/* Main Content Area */
+.main-content {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.hero-section {
+  padding: 40px;
+  text-align: center;
+}
+
+.hero-section h2 {
+  color: #27aae2;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.graph-container {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.graph-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  background: #f8f9fa;
+}
+
+.feature-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h3 {
+  color: #27aae2;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .title-section h1 {
+    font-size: 2rem;
+  }
+  
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .navigation {
+    position: static;
+  }
+  
+  .university-logos {
+    justify-content: center;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0 10px;
+  }
+  
+  .main-container {
+    padding: 0 10px;
+  }
+  
+  .hero-section {
+    padding: 20px;
+  }
+  
+  .title-section h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-content {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.navigation {
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+</style>
+
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header-section">
+    <div class="header-container">
+      <div class="logo-section">
+        <img src="marida.jpg" alt="MARIDA Logo" />
+      </div>
+      
+      <div class="title-section">
+        <h1>MARIDA</h1>
+        <p>Marine Debris Archive for Deep Learning</p>
+      </div>
+      
+      <div class="university-logos">
+        <img src="ntua.png" alt="NTUA Logo" />
+        <img src="uoa.png" alt="UOA Logo" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="main-container">
+    <div class="content-grid">
+      <!-- Navigation Sidebar -->
+      <nav class="navigation">
+        <h3 class="nav-title">Explore Dataset</h3>
+        <ul class="nav-links">
+          <li><a href="Report_1_Map.html">📍 Archive Overview</a></li>
+          <li><a href="Report_2_EDA.html">📊 Categories & Analysis</a></li>
+          <li><a href="Report_3_Signatures.html">🌊 Spectral Signatures</a></li>
+          <li><a href="Report_4_Embedding.html">🗺️ 2D Embedding Maps</a></li>
+          <li><a href="Report_5_Patches_stats.html">📈 Patch Statistics</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <section class="hero-section">
+          <h2>Welcome to MARIDA Dataset</h2>
+          <p>A comprehensive marine debris archive designed for deep learning applications in environmental monitoring and ocean conservation.</p>
+          
+          <div class="graph-container">
+            <img src="graph.PNG" alt="MARIDA Dataset Overview" />
+          </div>
+        </section>
+
+        <section class="features-grid">
+          <div class="feature-card">
+            <h3>🛰️ Satellite Data</h3>
+            <p>High-resolution Sentinel-2 imagery covering diverse marine environments worldwide</p>
+          </div>
+          
+          <div class="feature-card">
+            <h3>🏷️ Multi-class Labels</h3>
+            <p>15 distinct categories including marine debris, sargassum, ships, and water types</p>
+          </div>
+          
+          <div class="feature-card">
+            <h3>🤖 ML Ready</h3>
+            <p>Pre-processed patches optimized for deep learning model training and evaluation</p>
+          </div>
+          
+          <div class="feature-card">
+            <h3>🌍 Global Coverage</h3>
+            <p>Diverse geographical locations ensuring robust model generalization</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
