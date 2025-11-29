@@ -1,0 +1,440 @@
+/* Professional Carbon Footprint Calculator Styling */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Root Variables for Professional Color Scheme */
+:root {{
+    --primary-color: #2E7D32;        /* Forest Green */
+    --primary-light: #4CAF50;        /* Light Green */
+    --primary-dark: #1B5E20;         /* Dark Green */
+    --secondary-color: #1976D2;      /* Professional Blue */
+    --secondary-light: #42A5F5;      /* Light Blue */
+    --accent-color: #FF6F00;         /* Orange Accent */
+    --success-color: #388E3C;        /* Success Green */
+    --warning-color: #F57C00;        /* Warning Orange */
+    --error-color: #D32F2F;          /* Error Red */
+    --background-primary: #FAFAFA;   /* Light Gray Background */
+    --background-secondary: #FFFFFF; /* White Background */
+    --text-primary: #212121;         /* Dark Gray Text */
+    --text-secondary: #757575;       /* Medium Gray Text */
+    --text-light: #BDBDBD;           /* Light Gray Text */
+    --border-color: #E0E0E0;         /* Light Border */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    --shadow-heavy: rgba(0, 0, 0, 0.25);
+}}
+
+/* Base Styling */
+body {{
+    background: linear-gradient(135deg, #E8F5E8 0%, #F1F8E9 50%, #E0F2F1 100%);
+    background-attachment: fixed;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: var(--text-primary);
+}}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {{
+    color: var(--text-primary);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}}
+
+p {{
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}}
+
+/* Streamlit App Container */
+div[data-testid="stApp"] {{
+    background: transparent;
+}}
+
+/* Header Styling */
+header[data-testid="stHeader"] {{
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}}
+
+div[data-testid="stDecoration"] {{
+    background: var(--primary-color);
+    height: 3px;
+}}
+
+/* Main Content Areas */
+div[id^=tabs-bui][id$=-tabpanel-0] > div > div > div > div > div[class="stMarkdown"] {{
+    padding: 2rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px var(--shadow-light);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 1rem;
+}}
+
+div[id^=tabs-bui][id$=-tabpanel-1] > div > div > div > div > div[class="st-ae"],
+div[id^=tabs-bui][id$=-tabpanel-2] > div > div > div > div > div[class="st-ae"] {{
+    padding: 2rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px var(--shadow-light);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 1rem;
+}}
+
+/* Tab Styling */
+div[data-baseweb="tab-list"] {{
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 16px var(--shadow-light);
+}}
+
+div[data-baseweb="tab"] {{
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin: 0 0.25rem;
+}}
+
+div[data-baseweb="tab"]:hover {{
+    background: rgba(46, 125, 50, 0.1);
+}}
+
+div[data-baseweb="tab"][aria-selected="true"] {{
+    background: var(--primary-color);
+    color: white;
+}}
+
+div[data-baseweb="tab-border"] {{
+    display: none;
+}}
+
+/* Button Styling */
+.button-17,
+div[data-testid="column"] > div > div > div > div > div > button {{
+    align-items: center;
+    appearance: none;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 16px rgba(46, 125, 50, 0.3);
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: 0.5px;
+    padding: 0 24px;
+    position: relative;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+    width: auto;
+    margin: 0 auto;
+}}
+
+.button-17:hover,
+div[data-testid="column"] > div > div > div > div > div > button:hover {{
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
+    transform: translateY(-2px);
+}}
+
+.button-17:active,
+div[data-testid="column"] > div > div > div > div > div > button:active {{
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.3);
+}}
+
+/* Primary Button */
+button[data-testid="baseButton-primary"] {{
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(46, 125, 50, 0.3);
+}}
+
+button[data-testid="baseButton-primary"]:hover {{
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.4);
+    transform: translateY(-2px);
+}}
+
+/* Secondary Button */
+button[data-testid="baseButton-secondary"] {{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 16px;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px var(--shadow-light);
+}}
+
+button[data-testid="baseButton-secondary"]:hover {{
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3);
+}}
+
+/* Result Button Styling */
+div[id^=tabs-bui][id$=-tabpanel-4] > div > div > div > div > div > div > div > div > div > div > button[kind="secondary"] {{
+    background: linear-gradient(135deg, var(--success-color) 0%, var(--primary-light) 100%);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(56, 142, 60, 0.3);
+    transition: all 0.3s ease;
+}}
+
+div[id^=tabs-bui][id$=-tabpanel-4] > div > div > div > div > div > div > div > div > div > div > button[kind="secondary"]:hover {{
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--success-color) 100%);
+    box-shadow: 0 6px 20px rgba(56, 142, 60, 0.4);
+    transform: translateY(-2px);
+}}
+
+/* Input Field Styling */
+div[data-testid="stSelectbox"] > div > div,
+div[data-testid="stNumberInput"] > div > div,
+div[data-testid="stSlider"] > div > div,
+div[data-testid="stMultiSelect"] > div > div {{
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}}
+
+div[data-testid="stSelectbox"] > div > div:focus-within,
+div[data-testid="stNumberInput"] > div > div:focus-within,
+div[data-testid="stSlider"] > div > div:focus-within,
+div[data-testid="stMultiSelect"] > div > div:focus-within {{
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}}
+
+/* Slider Styling */
+div[data-testid="stSlider"] .stSlider > div > div > div > div {{
+    background-color: var(--primary-color);
+}}
+
+/* Did You Know Section */
+.DidYouKnow_root {{
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px var(--shadow-light);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    max-width: 1000px;
+    transition: all 0.3s ease;
+}}
+
+.DidYouKnow_root:hover {{
+    box-shadow: 0 12px 40px var(--shadow-medium);
+    transform: translateY(-4px);
+}}
+
+.DidYouKnow_title {{
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0 0 1rem 0;
+}}
+
+.DidYouKnow_content {{
+    color: var(--text-primary);
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}}
+
+/* Popup Styling */
+#popup {{
+    display: none;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 16px 48px var(--shadow-medium);
+    overflow: hidden;
+}}
+
+/* Text Styling */
+.TextNew {{
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+}}
+
+/* Center Text */
+div[data-testid="column"] > div > div > div > div > div > div > p,
+div[data-testid="stButton"] {{
+    text-align: center;
+}}
+
+/* Button Text Color */
+div[data-testid="column"] > div > div > div > div > div > button > div > p {{
+    color: white;
+    font-weight: 500;
+}}
+
+div[data-testid="column"] > div > div > div > div > div > button[kind="secondary"] > div > p {{
+    font-size: 16px;
+    margin-bottom: 0;
+    font-weight: 500;
+}}
+
+div[data-testid="stButton"] > button > div > p {{
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}}
+
+/* Primary Button in Main Tab */
+div[id^=tabs-bui][id$=-tabpanel-0] > div > div > div > div > div[data-testid="column"] > div > div > div > div > div > button[kind="primary"] > div > p {{
+    font-size: 18px;
+    font-weight: 600;
+}}
+
+/* Tooltip Styling */
+div[data-baseweb="tooltip"] > div {{
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 12px 16px;
+    box-shadow: 0 8px 24px var(--shadow-medium);
+    border: 1px solid var(--border-color);
+}}
+
+/* Link Styling */
+div[data-testid="stMarkdownContainer"] > p > a {{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}}
+
+div[data-testid="stMarkdownContainer"] > p > a:hover {{
+    color: var(--primary-dark);
+    text-decoration: underline;
+}}
+
+/* Result Section */
+div[id^=tabs-bui][id$=-tabpanel-2] > div > div > div > div > div > div > div > div > div > div[data-testid="stMarkdownContainer"] > p {{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-primary);
+}}
+
+/* Image Container */
+div[data-testid="stStyledFullScreenFrame"] > div,
+div[id^=tabs-bui][id$=-tabpanel-2] > div > div > div > div > div > div[id^=tabs-bui][id$=-tabpanel-0] > div > div > div > div > div > div {{
+    display: grid;
+    place-items: center;
+    text-align: center;
+}}
+
+div[data-testid="stImage"] {{
+    max-width: 700px;
+    display: grid;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px var(--shadow-light);
+}}
+
+/* Icons */
+.icon2, .icon3 {{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    margin-right: 8px;
+}}
+
+.icon2 {{
+    background-image: url("data:image/png;base64,{icon2}");
+}}
+
+.icon3 {{
+    background-image: url("data:image/png;base64,{icon3}");
+}}
+
+/* Responsive Design */
+@media (max-width: 768px) {{
+    div[id^=tabs-bui][id$=-tabpanel-0] > div > div > div > div > div[class="stMarkdown"],
+    div[id^=tabs-bui][id$=-tabpanel-1] > div > div > div > div > div[class="st-ae"],
+    div[id^=tabs-bui][id$=-tabpanel-2] > div > div > div > div > div[class="st-ae"] {{
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }}
+    
+    .DidYouKnow_root {{
+        padding: 1rem 1.5rem;
+        margin: 1.5rem 0;
+    }}
+    
+    div[data-testid="stImage"] {{
+        max-width: 100%;
+    }}
+}}
+
+/* Smooth Animations */
+* {{
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}}
+
+/* Hide Streamlit Elements */
+div[data-testid="StyledLinkIconContainer"] > a,
+div[data-testid="StyledLinkIconContainer"] > a > svg {{
+    background-color: transparent;
+    stroke: transparent;
+}}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {{
+    width: 8px;
+}}
+
+::-webkit-scrollbar-track {{
+    background: var(--background-primary);
+}}
+
+::-webkit-scrollbar-thumb {{
+    background: var(--primary-color);
+    border-radius: 4px;
+}}
+
+::-webkit-scrollbar-thumb:hover {{
+    background: var(--primary-dark);
+}}
